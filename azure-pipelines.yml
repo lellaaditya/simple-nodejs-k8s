@@ -19,7 +19,7 @@ variables:
   imagePullSecret: 'elegantaa6f-auth'
 
   # Agent VM image name
-  vmImageName: 'ubuntu-latest'
+  vmImageName: 'adpool'
 
 
 stages:
