@@ -14,7 +14,7 @@ variables:
   dockerRegistryServiceConnection: 'b9b3b6e7-10fa-4e36-8883-970af6bfae73'
   imageRepository: 'ltimadsnod'
   containerRegistry: 'elegant.azurecr.io'
-  dockerfilePath: '**/Dockerfile'
+  dockerfilePath: 'sample-app/Dockerfile'
   tag: '$(Build.BuildId)'
   imagePullSecret: 'elegantaa6f-auth'
 
