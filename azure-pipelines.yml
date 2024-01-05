@@ -19,7 +19,8 @@ variables:
   imagePullSecret: 'elegantaa6f-auth'
 
   # Agent VM image name
-  vmImageName: 'adpool'
+  pool:
+  name: adpool
 
 
 stages:
@@ -28,8 +29,6 @@ stages:
   jobs:
   - job: Build
     displayName: Build
-    pool:
-      vmImage: $(vmImageName)
     steps:
     - task: Docker@2
       displayName: Build and push an image to container registry
