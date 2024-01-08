@@ -1,19 +1,19 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name: ltimadsnod 
+  name: elegant 
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ltimadsnod
+      app: elegant
   template:
     metadata:
       labels:
-        app: ltimadsnod 
+        app: elegant
     spec:
       containers:
-        - name: ltimadsnod 
-          image: elegant.azurecr.io/ltimadsnod
+        - name: elegant 
+          image: elegant.azurecr.io/elegant
           ports:
           - containerPort: 80
