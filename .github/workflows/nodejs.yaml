@@ -15,8 +15,8 @@ jobs:
     
     # Docker build and push to a Azure Container registry (ACR)
     - run: |
-        docker build . -t elegant.azurecr.io/elegant:${{ github.sha }}
-        docker push elegant.azurecr.io/elegant:${{ github.sha }}
+            docker build . -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/sampleapp:${{ github.sha }}
+            docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/sampleapp:${{ github.sha }}
     
     # Set the target AKS cluster. 
     - uses: azure/k8s-actions/aks-set-context@master
