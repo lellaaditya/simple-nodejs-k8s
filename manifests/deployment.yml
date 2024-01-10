@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: elegant 
-          image: elegant.azurecr.io/elegant
+          image: adworld.azurecr.io/ele
           ports:
           - containerPort: 80
