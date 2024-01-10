@@ -30,12 +30,13 @@ jobs:
         resource-group: world
     
     # Create imagepullsecret for Azure Container registry (ACR)
-    - uses: azure/k8s-actions/k8s-create-secret@master
+    - uses: azure/k8s-create-secret@v1
       with:
         container-registry-url: ${{ secrets.REGISTRY_LOGIN_SERVER }}
         container-registry-username: ${{ secrets.REGISTRY_USERNAME }}
         container-registry-password: ${{ secrets.REGISTRY_PASSWORD }}
         secret-name: elegant-secret
+        namespace: default
     
     # Deploy app to AKS
     - uses: azure/k8s-actions/k8s-deploy@master
