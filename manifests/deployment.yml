@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: simplenodejsks 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simplenodejsks
+  template:
+    metadata:
+      labels:
+        app: simplenodejsks 
+    spec:
+      containers:
+        - name: simplenodejsks 
+          image: elead.azurecr.io/simplenodejsks
+          ports:
+          - containerPort: 80
